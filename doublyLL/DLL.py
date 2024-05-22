@@ -66,7 +66,7 @@ class DoublyLinkedList:
             return None
         if index == 0:
             return self.popfirst()
-        if index == self.length:
+        if index == self.length - 1:
             return self.pop()
         temp = self.get(index)
         before = temp.prev
@@ -74,6 +74,7 @@ class DoublyLinkedList:
 
         before.next = after
         after.prev = before
+        return temp
        
 
 
@@ -137,7 +138,7 @@ x = DoublyLinkedList(0)
 x.append(1)
 x.append(2)
 x.insert(2, 3)
-x.remove(2)
+x.pop()
 
 x.print_list()
 
