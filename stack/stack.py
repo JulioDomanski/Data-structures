@@ -35,7 +35,7 @@ class Stack:
         self.top = self.top.next
         temp.next = None
         self.heigth -= 1
-        return temp.value
+        return temp
 
 
 
